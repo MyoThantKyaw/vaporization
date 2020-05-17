@@ -23,7 +23,6 @@ import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js';
 // import { THREEx} from "../dis/threex.atmospherematerial"
 //  require( "../dis/threex.geometricglowmesh")
 
-
 var scene, camera, renderer, orbit;
 var perspective_camera;
 var ball;
@@ -92,7 +91,7 @@ function init() {
     // orbit.addEventListener("change", render)
     orbit.saveState();
 
-    scene.add(new THREE.AxesHelper(4))
+    // scene.add(new THREE.AxesHelper(4))
 
     // var backgroundTextureLoader = new THREE.TextureLoader();
 
