@@ -78,7 +78,7 @@ function init() {
     perspective_camera = new THREE.PerspectiveCamera(45, position_info.width / position_info.height, .01, 1000);
 
     camera = perspective_camera;
-    camera.position.set(earthRadius * 2, 5, earthRadius * 2)
+    camera.position.set(earthRadius * 3, 10, earthRadius * 3)
     camera.lookAt(new THREE.Vector3(0, 0, 0))
 
     scene = new THREE.Scene();
