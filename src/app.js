@@ -110,7 +110,7 @@ function init() {
     //     magFilter: THREE.LinearFilter
     // };
 
-    var matGroundPlane = new THREE.MeshLambertMaterial({color : 0xafafaf, side : THREE.DoubleSide, wireframe : false})
+    var matGroundPlane = new THREE.MeshLambertMaterial({color : 0xaaaaaa, side : THREE.DoubleSide, wireframe : false})
 
     var groundPlane = new THREE.Mesh( new THREE.PlaneBufferGeometry( 70, 70 ), matGroundPlane );
     groundPlane.rotateX( - Math.PI / 2 );
@@ -125,6 +125,14 @@ function init() {
     scene.add( ceiling );
 
     var loaderTextureWall = new THREE.TextureLoader();
+
+    loaderTextureWall.load( 'textures/floor1.jpg', function (texture) {
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set( 7, 7 );
+        matGroundPlane.map = texture;
+        matGroundPlane.needsUpdate = true;
+    }, undefined, function(err){ console.log(err) } ); 
+
 
     loaderTextureWall.load( 'textures/ceiling_texture.jpg', function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
