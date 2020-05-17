@@ -6,3 +6,37 @@ body{
 #view-3d{
     
 }
+
+@font-face {
+    font-family: "Pyidaungsu" ;
+    src: url("styles/Pyidaungsu-2.5.3_Regular.ttf") ;
+}
+
+body, h3, h4, p, label, .header{
+    font-family: "Pyidaungsu" !important;
+    src: url("styles/Pyidaungsu-2.5.3_Regular.ttf") ;
+}
+
+body{
+    margin: 0;
+    overflow-y: hidden;
+}
+
+
+#toolbar{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    /* background: rgb(174, 157, 192); */
+    padding-right : 6px;
+    padding-left : 6px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+#placeholderToolbar{
+    flex-grow: 4;
+}
+
